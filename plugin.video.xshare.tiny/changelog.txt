@@ -1,0 +1,22 @@
+[B]Version 1.0.5[/B] <31/07/2015>:
+ Fix lỗi hệ thống Fshare
+ 
+[B]Version 1.0.4[/B] <08/06/2015>:
+Update get maxspeed link on www.fshare.vn
+
+[B]Version 1.0.3[/B] <10/04/2015>:
+Fix:
+- Fix thông báo: "this is not a media file"
+
+[B]Version 1.0.2[/B] <08/04/2015>:
+Fix:
+- Get link maxspeed fshare không kích hoạt tải trực tiếp
+- Gỡ bỏ thư viện "script.module.parsedom"
+
+[B]Version 1.0.1[/B] <02/04/2014>
+- Fix acc VIP Fshare "không kích hoạt tải trực tiếp"
+- Thêm menu ngữ cảnh "xóa mục này" trong danh sách phim đã thêm
+- Hỗ trợ file Fshare có password
+
+[B]Version 1.0.0[/B] <15/03/2015>
+- Initial version

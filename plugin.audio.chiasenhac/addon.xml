@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.chiasenhac"
+       name="[B][COLOR lime]Chia[/COLOR] [COLOR red]Sẻ [/COLOR][COLOR yellow]Nhạc[/COLOR][/B]"
+       version="1.9"
+       provider-name="salemmax">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.simple.downloader" version="1.9.4" />
+	</requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>audio</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <language>en</language>
+		<summary lang="en">Add-on play Vietnamese Music online</summary>
+		<description lang="en">Nghe nhạc online từ website: Chiasenhac.com và Được Xây Dựng Bởi Salemmax</description>
+    </extension>
+</addon>

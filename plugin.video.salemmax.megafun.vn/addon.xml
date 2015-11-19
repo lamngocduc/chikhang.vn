@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon
+	id="plugin.video.salemmax.megafun"
+	version="1.0.19"
+	name="[COLOR violet][B]Truyền hình Xem lại[/B][/COLOR]"
+	provider-name="salemmax">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Megafun.VN</summary>
+		<description>[COLOR lime]Truyền Hình Xem Lại Thuộc Sở Hửu Của Salemmax Nghêm Cấm Sao Chép Chỉnh Sửa Lại Hệ Thống Nếu Không Sự Cho Phép Của Chủ Sờ Của Úng Dụng Salemmax[/COLOR]</description>
+		<platform>all</platform>
+	</extension>
+</addon>

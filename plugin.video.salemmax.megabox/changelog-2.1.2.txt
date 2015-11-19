@@ -1,0 +1,36 @@
+1.0.0
+Initial release
+
+1.1.0
+- Re-implement all source codes.
+- Completed items such as "Phim Lẻ", "Phim bộ" (limitations 30 episodes), "Show"
+- Items are not yet completed: "Tìm Phim", "Clip".
+
+1.1.1
+- Completed item "Clip".
+
+1.1.2
+- Completed item "Tìm Phim".
+
+2.0.0
+- Improve all functions such as:
+ ・Home screen has more items
+ ・Add paging function for all film kinds (Phim bộ, Phim Lẻ, …)
+ ・Allow search film by film kinds.
+
+2.0.1
+- List full episodes: fix limitation of 30 episodes in previous version.
+- Add detail kinds for every film kinds (Phim bộ, Phim lẻ, ...)
+
+2.0.2
+- Update HCMLIKE.com icon as default folder icon.
+- Move folders at Home screen to the beginning of screen.
+
+2.1.0
+- Add new feature that allows to search film on HMCLIKE Youtube.
+
+2.1.1
+- Add new feature that allows to re-display keyword which is entered in the previous time for the feature searchs film on HMCLIKE Youtube.
+
+2.1.2
+- Fix bug can not play all films (temporary fixing!)

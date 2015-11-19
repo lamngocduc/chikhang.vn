@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="plugin.audio.chiasenhac"
+       name="[B][COLOR lime]Chia[/COLOR] [COLOR red]Sẻ [/COLOR][COLOR yellow]Nhạc[/COLOR][/B]"
+       version="1.9"
+       provider-name="salemmax">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.simple.downloader" version="1.9.4" />
+	</requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>audio</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <language>en</language>
+		<summary lang="en">Add-on play Vietnamese Music online</summary>
+		<description lang="en">Nghe nhạc online từ website: Chiasenhac.com và Được Xây Dựng Bởi Salemmax</description>
+    </extension>
+</addon>
+
+<addon id="plugin.video.kenhFPT"
+       name="[COLOR orange]Truyền Hình FPT[/COLOR]"
+       version="1.0.3"
+       provider-name="Salemmax">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.simple.downloader" version="1.9.4" />
+	</requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <language>en</language>
+		<summary lang="en">TV online</summary>
+    <description>
+	* Addon được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	* Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại addon và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.	
+	</description>
+	<disclaimer lang="en">Nguồn data được chia sẻ trên internet. Chúng tôi không chịu mọi trách nhiệm pháp lý.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.salemmax.fptplay" name="[COLOR violet][B]Salemmax FPT Play TV[/B][/COLOR]" version="1.5.4" provider-name="Salemmax">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.xbmcswift2" version="2.4.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service"
+			library="start.py" start="startup">
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language></language>
+    <summary lang="en">Vietnam TV Online</summary>
+    <description lang="en">[COLOR lime]app được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	- Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.salemmax.hdviet"
+  version="1.1.6"
+  name="[COLOR lime][B]Salemmax HDViet[/B][/COLOR]"
+  provider-name="Salemmax">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>HDViet</summary>
+    <description>[COLOR lime]app được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	- Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.salemmax.htvonline"
+       version="1.0.0"
+       name="[COLOR aqua][B]Salemmax HTVonline[/B][/COLOR]"
+       provider-name="salemmax">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" optional="true" />
+	<import addon="script.module.simplejson" />
+	<import addon="script.module.t0mm0.common" version="1.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Entertainment</summary>
+    <description>[COLOR lime]app được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	- Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
+	<disclaimer lang="en">Nguồn data trên web nên chúng tôi không chịu trách nhiệm về sự ổn định.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.salemmax.kenh88"
+  version="1.0.0"
+  name="[COLOR lime][B]Salemmax phim88[/B][/COLOR]"
+  provider-name="Salemmax">
+  <requires>
+        <import addon="xbmc.python" version="2.1.0" optional="true" />
+		<import addon="script.module.beautifulsoup" version="3.0.8"/>
+		<import addon="script.module.simplejson" />
+		<import addon="script.module.t0mm0.common" version="1.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>kenh88</summary>
+    <description>[COLOR lime]app được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	- Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.salemmax.kenh108" name="[COLOR lime][B]kenh108.com[/B][/COLOR]" provider-name="Salemmax" version="1.0.3">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.xbmcswift2" version="1.3.1" />
+    <import addon="plugin.video.youtube" version="4.4.1" />
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Xem Phim Trên kenh108.com</summary>
+    <description>[COLOR lime]app được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	- Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
+  </extension>
+</addon>
+
+<addon id="plugin.video.salemmax.megabox"
+       name="[COLOR lime][B]Salemmax MegaBox[/B][/COLOR]"
+       version="2.1.3"
+       provider-name="Salemmax">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" optional="true" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>HCMLIKE-Media HD Film</summary>
+    <description>[COLOR lime]app được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	- Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
+	<disclaimer lang="en">
+[COLOR lime]Copyright © HCMLIKE.com. 
+[COLOR red]Nguồn phát bởi MegaBox và một số nguồn khác trên Internet. Chúng tôi không kiểm soát bất kỳ nguồn phim nào, cũng như không chịu trách nhiệm bản quyền nội dung trên các phim. Người xem đồng ý và cân nhắc nội dung mà mình muốn xem.[/COLOR]</disclaimer>
+    <platform>all</platform>
+		<license>http://www.gnu.org/licenses/</license>
+		<forum>http://www.hdvietnam.com/diendan/229-android-box/969799-danh-sach-cac-ung-dung-pho.html</forum>
+		<website>http://hcmlike.com</website>  
+		<email>hcmlike@gmail.com</email>
+		<source>http://ec2server.entrydns.org/hcmlike/kodi.repo.hcmlike-media</source>
+  </extension>
+</addon>
+
+<addon
+	id="plugin.video.salemmax.megafun"
+	version="1.0.19"
+	name="[COLOR violet][B]Truyền hình Xem lại[/B][/COLOR]"
+	provider-name="salemmax">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Megafun.VN</summary>
+		<description>[COLOR lime]Truyền Hình Xem Lại Thuộc Sở Hửu Của Salemmax Nghêm Cấm Sao Chép Chỉnh Sửa Lại Hệ Thống Nếu Không Sự Cho Phép Của Chủ Sờ Của Úng Dụng Salemmax[/COLOR]</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="plugin.video.salemmax.moviebox" name="[COLOR lime]Salemmax Phim MovieBox[/COLOR]" provider-name="Salemmax" version="0.5">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.xbmcswift2" version="1.3.1" />
+    <import addon="plugin.video.youtube" version="4.4.1" />
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Unofficial Kodi addon of MovieBox Android app</summary>
+    <description>[COLOR lime]app được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	- Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
+  </extension>
+</addon>
+
+<addon id="plugin.video.salemmax.p2pstreams"
+       name="[COLOR violet][B]Salemmax P2P-Streams[/B][/COLOR]"
+       version="1.4.0"
+       provider-name="enen92,fightnight">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.0.8"/>
+    <import addon="script.module.simplejson" />
+    <import addon="script.module.pytz" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.mechanize" version="0.2.6"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="server.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary>SopCast and AceStream</summary>
+    <description lang="en">AceStream and Sopcast in your favourite media center! Watch peer-to-peer streams in Kodi without the need for external players. Project page: https://github.com/enen92/P2P-Streams-Kodi</description>
+    <description lang="pt">AceStream e Sopcast no seu Media-Center de eleição! Assista a streams peer-to-peer no Kodi sem a necessidade de players externos. Página do projecto: https://github.com/enen92/P2P-Streams-Kodi</description>
+    <description lang="nl">Acestream en Sopcast in jouw favoriete media center. Kijk peer-to-peer streams in Kodi zonder de noodzaak voor externe spelers. Project pagina: https://github.com/enen92/P2P-Streams-Kodi/</description>
+    <description lang="it">AceStream e SopCast nel tuo Media Center preferito! Guarda i canali peer-to-peer in Kodi senza la necessità di player esterni. Pagina del progetto: https://github.com/enen92/P2P-Streams-Kodi/</description>
+    <disclaimer lang="en">The authors does not host nor distribute any of the content you may watch using this addon. The authors have no affiliation with any of the content providers. This addon does not track its users.</disclaimer>
+    <disclaimer lang="pt">Os autores não alojam nem distribuem nenhum do conteúdo acessível a partir deste addon. Os autores não têm qualquer afiliação com nenhum dos sites utilizados por este addon. O addon não contem nenhuma ferramenta de tracking.</disclaimer>
+    <disclaimer lang="nl">De auteurs houden of delen niets van de inhoud die u kunt bekijken met behulp van deze addon. De auteurs hebben geen banden met welke leverancier van inhoud dan ook. Deze addon houdt geen gegevens bij van zijn gebruikers.</disclaimer>
+    <disclaimer lang="it">L'autore non detiene o distribuisce alcun contenuto fruibile tramite l'utilizzo di questo addon. L'autore non è affiliato con nessun fornitore dei contenuti. Questo addon non traccia i suoi utenti.</disclaimer>
+    <forum>http://forum.kodi.tv/showthread.php?tid=201894</forum>
+    <source>https://github.com/enen92/P2P-Streams-Kodi | https://github.com/enen92/P2P-Streams-Kodi--Modules-</source>
+    <website>https://code.google.com/p/p2p-strm/</website>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon 
+	id="plugin.video.salemmax.phim3s"
+	version="1.0.0"
+	name="[COLOR lime][B]Salemmax Phim 3S[/B][/COLOR]"
+	provider-name="Salemmax">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" optional="true" />
+		<import addon="script.module.simplejson" />
+		<import addon="script.module.t0mm0.common" version="1.1.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Movies</summary>
+		<description>[COLOR lime]app được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	- Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
+		<disclaimer lang="en">
+			[COLOR lime]The streaming media are pulled from online provider(s). 
+			[COLOR red]These streams do not represent my views or opinions in any way.[/COLOR]</disclaimer>
+		<platform>all</platform>
+		<license>http://www.gnu.org/licenses/</license>
+		<forum></forum>
+		<website></website>  
+		<email></email>
+		<source></source>
+	</extension>
+</addon>
+
+<addon id="plugin.video.salemmax.phim14.net" name="[COLOR lime][B]Phim14.net[/B][/COLOR]" provider-name="salemmax" version="2.0.6">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.xbmcswift2" version="1.3.1" />
+    <import addon="plugin.video.youtube" version="4.4.1" />
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Watch free movies from phim14.net (phim lồng tiếng, thuyết minh tiếng Việt)</summary>
+    <description>Watch free movies from phim14.net (phim lồng tiếng, thuyết minh tiếng Việt Được Viết Bở Salemmax Nghiêm Cấm Sao Chép Và Đổi Mã Nguồng Nếu Không Được Phép Của Salemmax)</description>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.salemmax.phim60s"
+  version="2.0.12"
+  name="[COLOR lime][B]Salemmax Phim60s[/B][/COLOR]"
+  provider-name="salemmax">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.xbmcswift2" version="1.3.1" />
+    <import addon="plugin.video.youtube" version="4.4.1" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>phim60s</summary>
+    <description>[COLOR lime]app được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	- Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon 
+	id="plugin.video.salemmax.phimanhtrang"
+	version="1.0.0"
+	name="[COLOR lime][B]Salemmax Phim Ánh Trăng[/B][/COLOR]"
+	provider-name="salemmax">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" optional="true" />
+		<import addon="script.module.simplejson" />
+		<import addon="script.module.t0mm0.common" version="1.1.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Movies</summary>
+		<description>[COLOR lime]app được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	- Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
+		<disclaimer lang="en">
+			[COLOR lime]The streaming media are pulled from online provider(s). 
+			[COLOR red]These streams do not represent my views or opinions in any way.[/COLOR]</disclaimer>
+		<platform>all</platform>
+		<license>http://www.gnu.org/licenses/</license>
+		<forum></forum>
+		<website></website>  
+		<email></email>
+		<source></source>
+	</extension>
+</addon>
+
+<addon
+  id="plugin.video.salemmax.phimvang"
+  version="1.0.0"
+  name="[COLOR lime][B]Salemmax Phim Vàng[/B][/COLOR]"
+  provider-name="salemmax">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" optional="true"/>
+    <import addon="script.module.requests" version="2.4.3" />        
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="phimvang.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Watch Movies</summary>
+    <description>[COLOR lime]app được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	- Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.salemmax.vkool"
+  version="0.0.6"
+  name="[COLOR lime][B]Salemmax vkool.net[/B][/COLOR]"
+  provider-name="salemmax">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" optional="true"/>
+    <import addon="script.module.requests" version="2.4.3" />
+    <import addon="script.common.plugin.cache" version="2.5.2" />    
+    <import addon="script.module.simple.downloader" version="1.9.4" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="vkool.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Watch Movies</summary>
+    <description>Watch Movies on vkool.net</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.salemmax.xomgiaitri"
+  version="1.1.13"
+  name="[COLOR lime][B]Xóm Giải Trí[/B][/COLOR]"
+  provider-name="salemmax">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>xomiaitri.com</summary>
+    <description>Tác Phẩm Thuộc Quyền Sở Hửu Của Salemmax Nghiêm Cấm Sao Chép</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.salemmax.xsharefree" name="[COLOR lime][B]Kho Phim Xshare Free[/B][/COLOR]" version="3.2.28" provider-name="[COLOR aqua]Salemmax[]">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0" optional="true" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="xsharefree.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Xshare - XBMC HD Video</summary>
+		<description lang="en">[COLOR lime]Tìm và Xem HD Phim trên: fptplay.net, megabox.vn, hayhaytv.vn, hdviet.com, phimmoi.net Tác Phẩm Của Salemmax Nghiêm Cấm Chỉnh Sửa Lại Nếu Không Được Sự Cho Phép Của Salemmax[/COLOR]</description>
+		<platform>all</platform>
+		<language>en</language>
+		<license>GNU General Public License - v2</license>
+		<source>https://github.com/thaitni/xbmc.repo.xshare</source>
+		<email>thai@thanhthai.net</email>
+    </extension>
+</addon>
+
+<addon
+  id="plugin.video.salemmax.yeuphim"
+  version="0.6"
+  name="[COLOR lime][B]Salemmax Yêu Phim[/B][/COLOR]"
+  provider-name="[COLOR aqua]Salemmax[/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary></summary>
+    <description>[COLOR lime]app được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	- Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.talktv"
+  version="1.0.0"
+  name="TalkTV.vn"
+  provider-name="MrOdin">
+  <requires>
+	<import addon="xbmc.python" version="2.1.0" />    
+    <import addon="script.common.plugin.cache" version="2.5.2" />    
+    <import addon="script.module.requests" version="2.4.3"/>
+    <import addon="service.vnmusic" version="1.0.2"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="talktv.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Truyền hình trực tiếp, stream game, xem trực tiếp game</summary>
+    <description>[COLOR lime]TalkTV là hệ thống cho phép stream và xem trực tiếp hoàn toàn miễn phí được xây dựng Bời Salemmax.[/COLOR]</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.xshare" name="[COLOR red][B]Xshare[/COLOR]-[COLOR green]XBMC[/COLOR] [COLOR blue]HD Video[/B][/COLOR]" version="3.2.24" provider-name="thaitni">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0" optional="true" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="xshare.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Xshare - XBMC HD Video</summary>
+		<description lang="en">Tìm và Xem HD Video trên XBMC từ: fshare.vn, 4share.vn, vaphim.com, ifile.tv, phimfshare.com, fptplay.net, hdvietnam.com, megabox.vn, dangcaphd.com, hayhaytv.vn, hdviet.com, pubvn.net, vuahd.tv, phimmoi.net</description>
+		<platform>all</platform>
+		<language>en</language>
+		<license>GNU General Public License - v2</license>
+		<source>https://github.com/thaitni/xbmc.repo.xshare</source>
+		<email>thai@thanhthai.net</email>
+    </extension>
+</addon>
+
+<addon id="plugin.video.xshare.tiny" name="[COLOR red][B]Xshare[/COLOR] [COLOR gold]tiny[/COLOR]-[COLOR green]XBMC[/COLOR] [COLOR blue]HD Video[/B][/COLOR]" version="1.0.5" provider-name="thaitni">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0" optional="true" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="xsharetiny.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Xshare tiny - XBMC HD Video</summary>
+		<description lang="en">Xem HD Video trên XBMC từ ID file trên website: https://www.fshare.vn</description>
+		<platform>all</platform>
+		<language>en</language>
+		<license>GNU General Public License - v2</license>
+		<source>https://github.com/thaitni/xbmc.repo.xshare</source>
+		<email>thai@thanhthai.net</email>
+    </extension>
+</addon>
+
+<addon id="repository.salemmax" name="[COLOR red][B]salemmax[/COLOR] [COLOR blue]Repository[/B][/COLOR]" version="1.0.0" provider-name="salemmax">
+	<extension point="xbmc.addon.repository" name="Official XBMC.org Add-on Repository">
+		<info compressed="true">1</info>
+		<checksum>2</checksum>
+		<datadir zip="true">3</datadir>
+		<hashes>true</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Play Video with find subs on XBMC from many host</summary>
+		<description>Download and install addons from salemmax Repository: thế Giới Giải trí Đa Phương Tiện Của Salemmax</description>
+		<language>en</language>
+		<platform>all</platform>
+		<email>salemmax@max.vn</email>
+	</extension>
+</addon>
+</addons>
