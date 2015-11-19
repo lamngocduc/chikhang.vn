@@ -42,7 +42,7 @@ def make_request(url, headers=None):
 def get_categories():
     
 	add_link('', '[COLOR lime]salemmax FPT[/COLOR]', 0, 'udp://@225.1.1.2:30120', thumbnails + 'fpt.png', '')
-	add_link('', '[COLOR lime]K+NS SD[/COLOR]', 0, 'udp://@225.1.1.142:30120', thumbnails + 'k+NS.png', '')
+	add_link('', '[COLOR lime]K+NS SD[/COLOR]', 0, 'udp://@225.1.1.142:30120', thumbnails + 'k+nst.png', '')
 	add_link('', '[COLOR lime]K+PC SD[/COLOR]', 0, 'udp://@225.1.1.139:30120', thumbnails + 'k+pc.png', '')
 	add_link('', '[COLOR lime]SCTV Hai HD[/COLOR]', 0, 'http://hlscache.fptplay.net.vn/livev/sctvhaihd_2000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl', thumbnails + 'sctvhaihd.png', '')
 	add_link('', '[COLOR lime]SCTV 14[/COLOR]', 0, 'http://tvod.accessasia.tv:8080/live/sctv14.480p/index.m3u8', thumbnails + 'sctv14.png', '')
