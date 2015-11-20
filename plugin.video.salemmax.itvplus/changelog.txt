@@ -1,0 +1,19 @@
+﻿2.0.4 (18/11/2015)
+- Fix bug version update
+
+2.0.3 (18/11/2015)
+- Fix bug
+
+2.0.2 (17/11/2015)
+- Fix "Kho Phim"
+- Fix "Thế Giới Nhạc Không Lời"
+- Update Menu "Tổng Hợp" in main
+- Update sub menu
+- Update time to "TIVI XEM LẠI"
+
+2.0.1 (11/11/2015)
+- Fix "Kho Phim"
+- Update Menu "Setting" in main
+
+2.0.0 (10/11/2015)
+New version

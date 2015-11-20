@@ -47,7 +47,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.salemmax.fptplay" name="[COLOR violet][B]Salemmax FPT Play TV[/B][/COLOR]" version="1.5.4" provider-name="Salemmax">
+<addon id="plugin.video.salemmax.fptplay" name="[COLOR violet][B]Salemmax FPT Play TV[/B][/COLOR]" version="1.5.5" provider-name="Salemmax">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.xbmcswift2" version="2.4.0"/>
@@ -109,6 +109,33 @@
 	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
 	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
 	<disclaimer lang="en">Nguồn data trên web nên chúng tôi không chịu trách nhiệm về sự ổn định.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.salemmax.itvplus"
+       version="2.0.4"
+       name="[COLOR red][B]ITV*[/COLOR]Plus[/B]"
+       provider-name="itv member">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" optional="true" />
+	<import addon="script.module.simplejson" />
+	<import addon="script.module.t0mm0.common" version="1.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="autorun.py" start="startup">
+  </extension>   
+  <extension point="xbmc.addon.metadata">
+    <summary>ITV Entertainment</summary>
+    <description>
+	* Addon được salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về salemmax. 
+	* Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên salemmax.
+	- Không tự ý chỉnh sửa lại addon và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.	
+	</description>
+	<disclaimer lang="en">Nguồn data được chia sẻ trên internet. Chúng tôi không chịu mọi trách nhiệm pháp lý.</disclaimer>
     <platform>all</platform>
   </extension>
 </addon>
@@ -398,25 +425,10 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Watch Movies</summary>
-    <description>Watch Movies on vkool.net</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon
-  id="plugin.video.salemmax.xomgiaitri"
-  version="1.1.13"
-  name="[COLOR lime][B]Xóm Giải Trí[/B][/COLOR]"
-  provider-name="salemmax">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>xomiaitri.com</summary>
-    <description>Tác Phẩm Thuộc Quyền Sở Hửu Của Salemmax Nghiêm Cấm Sao Chép</description>
+    <description>[COLOR lime]app được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	- Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -518,19 +530,442 @@
     </extension>
 </addon>
 
-<addon id="repository.salemmax" name="[COLOR red][B]salemmax[/COLOR] [COLOR blue]Repository[/B][/COLOR]" version="1.0.0" provider-name="salemmax">
+<addon id="repository.AznKodi" name="AznKodi" version="1.0.0" provider-name="AznKodi">
+	<extension point="xbmc.addon.repository" name="VietKodi Addon Repository">
+		<info compressed="false">https://github.com/AznKodi/repository.AznKodi/raw/master/addons.xml</info>
+		<checksum>https://github.com/AznKodi/repository.AznKodi/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/AznKodi/repository.AznKodi/raw/master/zips</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>XBMC-Kodi Repo</summary>
+		<description>Repo for XBMC-Kodi</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.bacha" name="BacHa Repository" version="1.0.0" provider-name="bacha">
+	<extension point="xbmc.addon.repository" name="BacHa Addon Repository">
+		<info compressed="false">https://github.com/bac-ha/repository.bacha/raw/master/addons.xml</info>
+		<checksum>https://github.com/bac-ha/repository.bacha/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/bac-ha/repository.bacha/raw/master/zips</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Kodi repository</summary>
+		<description>Repository for Kodi</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.BlackBox247" name="BlackBox247 REPO" version="1.0.3" provider-name="BlackBox247">
+	<extension point="xbmc.addon.repository" name="BlackBox247 Addon Repository">
+		<info compressed="false">http://blackbox247.com/BlackBox247_Repo/BlackBox247-Repo.xml</info>
+		<checksum>http://blackbox247.com/BlackBox247_Repo/BlackBox247-Repo.md5</checksum>
+		<datadir zip="true">http://blackbox247.com/BlackBox247_Repo/Zips/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install BlackBox247 REPO</summary>
+		<description>Download and install addons from BlackBox247 REPO: Watch free Movies and TV shows from many different sources</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.bsbsmartrelax"
+		name="BSB Smart Relax Repository 2.0"
+		version="2.0"
+		provider-name="BSB Smart Relax">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0"/>
+  </requires>
+	<extension point="xbmc.addon.repository"
+		name="BSB Smart Relax Repository">
+		<info compressed="true">http://smartrelax.4all.vn/kodi/addons/android/addons.xml</info>
+		<checksum>http://smartrelax.4all.vn/kodi/addons/android/addons.xml.md5</checksum>
+		<datadir zip="true">http://smartrelax.4all.vn/kodi/addons/android</datadir>
+		<hashes>true</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">BSB Smart Relax Repository</summary>
+		<description lang="en"></description>
+		<disclaimer lang="en"></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.cantobumedia" name="Cantobu Media Repository" version="1.0.0" provider-name="phuoclv">
 	<extension point="xbmc.addon.repository" name="Official XBMC.org Add-on Repository">
-		<info compressed="true">1</info>
-		<checksum>2</checksum>
-		<datadir zip="true">3</datadir>
+		<info compressed="true">https://raw.githubusercontent.com/phuoclv/repository.cantobumedia/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/phuoclv/repository.cantobumedia/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/phuoclv/repository.cantobumedia/master</datadir>
+		<hashes>true</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Cantobu Media Entertainment</summary>
+		<description>Giải trí trên XBMC/Kodi</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.datho.xbmc-plugins" name="Datho Add-on Repository" version="1.0.0" provider-name="Datho-Digital">
+    <extension point="xbmc.addon.repository" name="Datho Add-on Repository">
+        <info compressed="false">http://raw.github.com/datho/datho-xbmc-repo/master/addons.xml</info>
+        <checksum>http://raw.github.com/datho/datho-xbmc-repo/master/addons.xml.md5</checksum>
+        <datadir zip="true">http://raw.github.com/datho/datho-xbmc-repo/master/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install Add-ons from Datho Repository</summary>
+		<description>Add-ons for XBMC</description>
+		<disclaimer>by datho</disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.dk-xbmc-repaddon" name="dk-xbmc-repaddon Add-on Repository" version="1.0.3" provider-name="dk-xbmc-repaddon">
+	<extension point="xbmc.addon.repository" name="dk-xbmc-repaddon Add-on Repository">
+		<info compressed="false">http://dk-xbmc-repaddon-rep.googlecode.com/svn/trunk/addons.xml</info>
+		<checksum>http://dk-xbmc-repaddon-rep.googlecode.com/svn/trunk/addons.xml.md5</checksum>
+		<datadir zip="false">http://dk-xbmc-repaddon-rep.googlecode.com/svn/trunk/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install Add-ons from dk Add-on Repository</summary>
+		<description>Video plug-ins for XBMC</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+
+<addon 
+	id="repository.salemmax" 
+	version="1.0.0" 
+	name="[COLOR lime][B]salemmax Repository[/B][/COLOR]" 
+	provider-name="salemmax">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.repository"
+		name="[COLOR lime][B]salemmax Repository[/B][/COLOR]">
+		<info compressed="true">https://raw.github.com/lamngocduc/chikhang/master/addons.xml</info>
+		<checksum>https://raw.github.com/lamngocduc/chikhang/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/lamngocduc/chikhang/raw/master/zips/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Install addon from salemmax's repository</summary>
+		<description lang="en">[COLOR red][B]salemmax[/COLOR]-[COLOR lime]Repository tập hợp các addon và repository giải trí online trên XBMC - Kodi[/B][/COLOR]</description>
+		<disclaimer lang="en">Mọi nội dung được lấy từ Internet vì vậy chúng tôi không chịu trách nhiệm về chất lượng cũng như sự ổn định</disclaimer>
+		<email>contact@salemmax</email>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.HopDenTV" name="HopDenTV REPO" version="1.0.3" provider-name="HopDenTV">
+	<extension point="xbmc.addon.repository" name="HopDenTV Addon Repository">
+		<info compressed="false">http://hdtvblackbox.com/HopDenTV_REPO/HopDenTV-Repo.xml</info>
+		<checksum>http://hdtvblackbox.com/HopDenTV_REPO/HopDenTV-Repo.md5</checksum>
+		<datadir zip="true">http://hdtvblackbox.com/HopDenTV_REPO/Zips/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install HopDenTV REPO</summary>
+		<description>Download and install addons from HopDenTV REPO: Watch free Movies and TV shows from many different sources</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+
+<addon id="repository.itvplus"
+		name="ITV Repository"
+		version="1.0.0"
+		provider-name="ITV member">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0"/>
+  </requires>
+	<extension point="xbmc.addon.repository"
+		name="ITV Add-on's Repository">
+		<info compressed="true">http://xbmc.itvplus.net/REPO/addons.xml</info>
+		<checksum>http://xbmc.itvplus.net/REPO/addons.xml.md5</checksum>
+		<datadir zip="true">http://xbmc.itvplus.net/REPO</datadir>
+		<hashes>true</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Entertainment</summary>
+		<description lang="en">Download and install addons from ITV Repository</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+    <addon id="repository.kodi-i4a-repo" name="i4atv" version="1.0.6" provider-name="Inside 4ndroid">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="i4atv">
+            <info compressed="false">https://raw.githubusercontent.com/Inside4ndroid/kodi-i4a-repo/master/_repo/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/Inside4ndroid/kodi-i4a-repo/master/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/Inside4ndroid/kodi-i4a-repo/master/_repo/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Inside 4ndroid Kodi Addons</summary>
+            <description>Inside 4ndroid Kodi Addons</description>
+            <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.kodipopcorntime" name="KODI Popcorn Time Repository" version="1.0.2" provider-name="Diblo">
+     <extension point="xbmc.addon.repository" name="KODI Popcorn Time Repository">
+        <info compressed="false">http://raw.githubusercontent.com/Diblo/KODI-Popcorn-Time/Repository/addons.xml</info>
+        <checksum>http://raw.githubusercontent.com/Diblo/KODI-Popcorn-Time/Repository/addons.xml.md5</checksum>
+        <datadir zip="true">http://raw.githubusercontent.com/Diblo/KODI-Popcorn-Time/Repository/</datadir>
+    </extension>
+    <requires>
+        <import addon="xbmc.python" version="2.14.0"/>
+    </requires>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <website><![CDATA[https://github.com/Diblo/KODI-Popcorn-Time]]></website>
+        <forum><![CDATA[http://forums.tvaddons.ag/threads/32586-KODI-Popcorn-Time]]></forum>
+        <source><![CDATA[https://github.com/Diblo/KODI-Popcorn-Time]]></source>
+        <language>English</language>
+        <license><![CDATA[GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007]]></license>
+        <summary lang="en"><![CDATA[KODI Popcorn Time Auto Update.]]></summary>
+        <description lang="en"><![CDATA[KODI Popcorn Time Auto Update.]]></description>
+        <noicon>false</noicon>
+        <nofanart>false</nofanart>
+    </extension>
+</addon>
+
+<addon id="repository.lambda" name="lambda Add-on repository" version="1.1.0" provider-name="lambda">
+	<extension point="xbmc.addon.repository" name="lambda Add-on repository">
+		<dir>
+			<info compressed="false">http://raw.github.com/lambda81/lambda-repo/master/addons.xml</info>
+			<checksum>http://raw.github.com/lambda81/lambda-repo/master/addons.xml.md5</checksum>
+			<datadir zip="true">http://raw.github.com/lambda81/lambda-repo/master/</datadir>
+		</dir>
+		<info compressed="false">https://offshoregit.com/lambda81/lambda-repo/addons.xml</info>
+		<checksum>https://offshoregit.com/lambda81/lambda-repo/addons.xml.md5</checksum>
+		<datadir zip="true">https://offshoregit.com/lambda81/lambda-repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Install Add-ons from lambda</summary>
+		<description lang="en">Download and install add-ons from lambda repository.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.lnt900" name="Lnt900's Repository" version="1.0.0" provider-name="lnt900">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.repository" name="Lnt900 Kodi Add-on Repository">
+		<info compressed="true">https://raw.githubusercontent.com/lnt900/kodi.repo.lnt900/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/lnt900/kodi.repo.lnt900/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/lnt900/kodi.repo.lnt900/master</datadir>
+		<hashes>true</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Created or edited add-ons by Lnt900</summary>
+		<description>Video and Service Addons for Vietnamese</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.metalkettle" name="MetalKettles Addon Repository" version="1.6.2" provider-name="MetalKettle">
+	<extension point="xbmc.addon.repository" name="MetalKettles Addon Repository">
+		<info compressed="false">http://offshoregit.com/metalkettle/addons.xml</info>
+		<checksum>http://offshoregit.com/metalkettle/addons.xml.md5</checksum>
+		<datadir zip="true">http://offshoregit.com/metalkettle/zips</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install my Addons</summary>
+		<description>Download and install addons from MetalKettle</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.otherguysstuff" name="The other Viet Addons" version="1.0.0" provider-name="dk">
+	<extension point="xbmc.addon.repository" name="The other Viet Addons">
+		<info compressed="false">https://bitbucket.org/dknlght/dk-xbmc-repaddon-rep/raw/master/addons.xml</info>
+		<checksum>https://bitbucket.org/dknlght/dk-xbmc-repaddon-rep/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://bitbucket.org/dknlght/dk-xbmc-repaddon-rep/raw/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>The other Viet Addons</summary>
+		<description>Video plug-ins for XBMC</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.p2p-streams.xbmc" name="p2p-streams repository" version="1.0.4" provider-name="enen92 - fightnight">
+	<extension point="xbmc.addon.repository" name="p2p-streams Repository">
+		<info compressed="false">http://p2p-strm.googlecode.com/svn/addons/addons.xml</info>
+		<checksum>http://p2p-strm.googlecode.com/svn/addons/addons.xml.md5</checksum>
+		<datadir zip="true">http://p2p-strm.googlecode.com/svn/addons</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>p2p-streams repository</summary>
+   		<description lang="en">Install P2P-Streams addon for Kodi (SopCast and AceStream). Watch peer-to-peer streams in Kodi without the need for external players!</description>
+    		<description lang="pt">Instale o addon P2P-Streams para o Kodi (SopCast e AceStream). Assista a streams peer-to-peer no Kodi sem a necessidade de players externos!</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.traitravinh" name="TraiTraVinh's Testing Repo" version="1.0" provider-name="traitravinh">
+	<extension point="xbmc.addon.repository" name="TraiTraVinh's Testing Repo">
+		<info compressed="false">https://raw.github.com/traitravinh/traitravinh.repository.xbmc/master/addons.xml</info>
+		<checksum>https://raw.github.com/traitravinh/traitravinh.repository.xbmc/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.github.com/traitravinh/traitravinh.repository.xbmc/master/zips</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Testing repo</summary>
+		<description>Testing repo</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.uPlayHD.com"
+		name="uPlayHD.com Version 2.1"
+		version="2.1"
+		provider-name="ThuN">
+	<extension point="xbmc.addon.repository"
+		name="uPlayHD Add-on Repository">
+		<info compressed="true">http://bitbucket.org/brianminh84/uplayhd.com/raw/master/addons.xml</info>
+		<checksum>http://bitbucket.org/brianminh84/uplayhd.com/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://bitbucket.org/brianminh84/uplayhd.com/raw/master/</datadir>
+		<hashes>true</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Repositories uPlayHD.Com</summary>
+		<description lang="en"></description>
+		<disclaimer></disclaimer>
+		<disclaimer lang="en"></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.vietmedia"
+		name="VietMedia Add-ons"
+		version="1.0.0"
+		provider-name="VietMedia">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0"/>
+  </requires>
+	<extension point="xbmc.addon.repository"
+		name="VietMedia Add-on Repository">
+		<info compressed="true">https://raw.github.com/onepas/kodi-addons/master/addons.xml</info>
+		<checksum>https://raw.github.com/onepas/kodi-addons/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.github.com/onepas/kodi-addons/master</datadir>
+		<hashes>true</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">VietMedia Entertainment</summary>
+		<description lang="en"></description>
+		<disclaimer lang="en"></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.vnmusic"
+		name="Vietnam music Add-ons"
+		version="0.9"
+		provider-name="MrOdin">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0"/>
+  </requires>
+	<extension point="xbmc.addon.repository"
+		name="VietMedia Add-on Repository">
+		<info compressed="true">https://raw.githubusercontent.com/tamnm/kodi.mp3.zing.vn/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/tamnm/kodi.mp3.zing.vn/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/tamnm/kodi.mp3.zing.vn/master</datadir>
+		<hashes>true</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Vietname music add-ons</summary>
+		<description lang="en"></description>
+		<disclaimer lang="en"></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.xbmc-addons-chinese" name="Chinese Add-ons" version="1.2.0" provider-name="Taxigps">
+    <extension point="xbmc.addon.repository" name="Chinese Add-ons">
+        <info compressed="true">https://github.com/taxigps/xbmc-addons-chinese/raw/master/addons.xml</info>
+        <checksum>https://github.com/taxigps/xbmc-addons-chinese/raw/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://github.com/taxigps/xbmc-addons-chinese/raw/master/repo</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Chinese Add-ons Repository</summary>
+        <summary lang="zh">面向中文用户的插件库</summary>
+        <description>Download and install add-ons from xbmc-addons-chinese addon repository.[CR][CR]By using this Repository you will be able to take advantage of our cutting edge features developed for chinese people.</description>
+        <description lang="zh">从xbmc-addons-chinese库下载安装插件。[CR][CR]通过使用这个程序库，你将能够分享我们为中文用户开发的插件。</description>
+        <disclaimer>Taxigps did not make all the add-ons on this repository and is not responsible for their content</disclaimer>
+        <disclaimer lang="zh">本库中扩展功能模块不完全由Taxigps开发，对他人提交的内容不承担责任</disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.xbmchub" name="TVADDONS.ag Addon Repository" version="1.0.6" provider-name="tvaddons.ag">
+	<extension point="xbmc.addon.repository" name="TVADDONS.ag Addon Repository">
+	<dir>
+		<info compressed="false">https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml</info>
+		<checksum>https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/zips/</datadir>
+	</dir>
+		<info compressed="false">https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/addons.xml</info>
+		<checksum>https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>The Best Third Party Addons for Kodi, Brought to you by TVADDONS.ag</summary>
+		<description>The Best Third Party Addons for Kodi, Brought to you by TVADDONS.ag</description>
+		<platform>all</platform>
+                <forum>http://forums.tvaddons.ag/forums/113-TVADDONS-AG-ADDON-REPOSITORY</forum>
+                <website>http://www.tvaddons.ag/</website>
+	</extension>
+</addon>
+
+<addon id="repository.xunitytalk" name=".[COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk Repository" version="1.0.6" provider-name=".[COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk">
+	<extension point="xbmc.addon.repository" name="Mikey1234 Addon Repository">
+		<info compressed="false">http://xty.me/xunitytalk/addons/addons.xml</info>
+		<checksum>http://xty.me/xunitytalk/addons/addons.xml.md5</checksum>
+		<datadir zip="true">http://xty.me/xunitytalk/addons</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>The Best Third Party Addons for XBMC, .[COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk</summary>
+		<description>The Best Third Party Addons for XBMC, .[COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.zeus" name="[COLOR black].[/COLOR][COLOR yellow]ZEUS [/COLOR][COLOR white]Repository[/COLOR]" version="1.1.0" provider-name="ZEUS">
+	<extension point="xbmc.addon.repository" name="[COLOR black].[/COLOR][COLOR yellow]ZEUS [/COLOR][COLOR white]Repository[/COLOR]">
+        <info compressed="false">http://repo.zeusrepo.com/addons.xml</info>
+		<checksum>http://repo.zeusrepo.com/addons.xml.md5</checksum>
+		<datadir zip="true">http://repo.zeusrepo.com/zips</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>ZEUS KODI XBMC ADDON From Hakamac</summary>
+		<description>For Support and news go to http://zeus.video</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="xbmc.repo.xshare" name="Xshare Repository" version="1.0.0" provider-name="thaitni">
+	<extension point="xbmc.addon.repository" name="Official XBMC.org Add-on Repository">
+		<info compressed="true">https://raw.githubusercontent.com/thaitni/xbmc.repo.xshare/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/thaitni/xbmc.repo.xshare/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/thaitni/xbmc.repo.xshare/master</datadir>
 		<hashes>true</hashes>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>Play Video with find subs on XBMC from many host</summary>
-		<description>Download and install addons from salemmax Repository: thế Giới Giải trí Đa Phương Tiện Của Salemmax</description>
+		<description>Download and install addons from Xshare Repository: Watch movies from fshare.vn, 4share.vn, tenlua.vn, ...</description>
 		<language>en</language>
 		<platform>all</platform>
-		<email>salemmax@max.vn</email>
+		<license>GNU General Public License - v2</license>
+		<source>https://github.com/thaitni/xbmc.repo.xshare</source>
+		<email>thai@thanhthai.net</email>
 	</extension>
 </addon>
 </addons>
