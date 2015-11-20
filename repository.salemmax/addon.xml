@@ -10,9 +10,9 @@
 	</requires>
 	<extension point="xbmc.addon.repository"
 		name="[COLOR lime][B]salemmax Repository[/B][/COLOR]">
-		<info compressed="true">https://raw.github.com/lamngocduc/chikhang/master/addons.xml</info>
-		<checksum>https://raw.github.com/lamngocduc/chikhang/master/addons.xml.md5</checksum>
-		<datadir zip="true">https://github.com/lamngocduc/chikhang/raw/master/zips/</datadir>
+		<info compressed="true">https://raw.github.com/lamngocduc/chikhang.vn/master/addons.xml</info>
+		<checksum>https://raw.github.com/lamngocduc/chikhang.vn/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/lamngocduc/chikhang.vn/raw/master/zips/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Install addon from salemmax's repository</summary>
