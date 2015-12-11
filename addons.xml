@@ -433,7 +433,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.salemmax.xsharefree" name="[COLOR lime][B]Kho Phim Xshare Free[/B][/COLOR]" version="3.2.28" provider-name="[COLOR aqua]Salemmax[]">
+<addon id="plugin.video.salemmax.xsharefree" name="[COLOR lime][B]Kho Phim Xshare Free[/B][/COLOR]" version="3.2.30" provider-name="[COLOR aqua]Salemmax[]">
     <requires>
         <import addon="xbmc.python" version="2.1.0" optional="true" />
     </requires>

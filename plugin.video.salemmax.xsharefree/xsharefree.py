@@ -668,8 +668,7 @@ def logout_site(cookie,url):
 def loginfshare(headers={'User-Agent':'Mozilla/5.0 Chrome/39.0.2171.71 Firefox/33.0'}):
 	response=make_request("https://www.fshare.vn/login",resp='o');result=''
 	if not response:mess(u'Lỗi kết nối Fshare.vn!','fshare.vn');return result
-	fs_csrf=xsearch('value="(.+?)".*name="fs_csrf',response.body,1)
-	headers['Cookie']=response.cookiestring
+	fs_csrf=xsearch('value="(.+?)".*name="fs_csrf',response.body,1);headers['Cookie']=response.cookiestring
 	username=myaddon.getSetting('usernamef');password=myaddon.getSetting('passwordf')
 	form_fields = {"LoginForm[email]":username,"LoginForm[password]":password,"fs_csrf":fs_csrf}
 	response=make_post("https://www.fshare.vn/login",headers,form_fields)
@@ -1862,8 +1861,9 @@ def hdvietnam(name,url,img,fanart,mode,page,query):
 			addir_info(namecolor(name),urlhome+href.split('&')[0],img,query='PL1')
 	elif query=='PL1':
 		parent_path='http://www.hdvietnam.com/diendan/'
-		if '&styleid=9&sort=dateline' not in url and 'f=150' in url:url=url+'&styleid=9'
-		elif '&styleid=9&sort=dateline' not in url:url=url+'&styleid=9&sort=dateline'
+		#if '&styleid=9&sort=dateline' not in url and 'f=150' in url:url=url+'&styleid=9'
+		#elif '&styleid=9&sort=dateline' not in url:url=url+'&styleid=9&sort=dateline'
+		if '&styleid=9' not in url:url=url+'&styleid=9'
 		body=make_request(url,hd,maxr=2)
 		if page<2:#Phụ Mục
 			for href,title in re.findall('<h2 class="forumtitle"><a href="(.+?)&.+?>(.+?)</a></h2>',body):
@@ -2127,7 +2127,7 @@ def fptplay(name,url,img,mode,page,query):
 	else:hd['Cookie']=makerequest(joinpath(xsharefolder,'fptplay.cookie'))
 	if query=="fptplay.net":
 		body=make_request('http://fptplay.net',hd)
-		addir(color['search']+"[B]Tìm phim trên fptplay.net[/B][/COLOR]","fptplay.net",icon['fptplay'],'',mode,1,"FPS",True)
+		addir(color['search']+"[B]Search trên fptplay.net[/B][/COLOR]","fptplay.net",icon['fptplay'],'',mode,1,"FPS",True)
 		addir(color['fptplay']+'[B]Live TV[/B][/COLOR]','http://fptplay.net/livetv',icon['fptplay'],'',mode,1,'FTV',True)
 		for href,title in sets(re.findall('<a href="(.+?)" title="(.+?)" class="category_title">',body)):
 			title=color['fptplay']+fpt2s('[B]%s[/B]'%title)+'[/COLOR]'
@@ -2337,7 +2337,7 @@ def megabox(name,url,img,fanart,mode,page,query):
 		return body
 
 	if query=='MGB1':
-		label=labelsearch("Tìm phim trên megabox.vn")
+		label=labelsearch("Search trên megabox.vn")
 		addir_info(label,homepage,ico,'',mode,1,'makeitemsearch',True)
 		body=homehtml()
 		for href,label in re.findall('<li><a href="(.+?)" title="">(.+?)</a></li>',body):
@@ -2373,7 +2373,7 @@ def megabox(name,url,img,fanart,mode,page,query):
 	elif query=='MGB':
 		dict=json_rw('megabox.json')
 		if not dict.get('MGB1'):dict=update_dict(dict)
-		name=color['search']+"Tìm phim trên megabox.vn[/COLOR]"
+		name=color['search']+"Search trên megabox.vn[/COLOR]"
 		addir(name,'megabox.vn',icon['megabox'],'',mode,1,'megabox.vn',True)
 		for href,name in dict['MGB1']:#(phim-le,Phim lẻ),(phim-bo,Phim bộ),(show,Show),(clip,Clip)
 			addir(color['megabox']+name+'[/COLOR]',href,icon['megabox'],'',mode,1,'mainmenu',True)
@@ -2427,8 +2427,8 @@ def megabox(name,url,img,fanart,mode,page,query):
 		url='/'.join((os.path.dirname(url),urllib.quote(os.path.basename(url))))
 		body=make_request(url,resp='o',maxr=5);link=xsearch("changeStreamUrl\('(.+?)'\)",body.body,1)
 		if not link:play_youtube(xsearch("\'(https://www.youtube.com/watch\?v=.+?)\'",body.body,1));return
-		hd['Cookie']=body.cookiestring
-		maxspeedlink=make_post('http://phim.megabox.vn/content/get_link_video_lab',data={"link":"%s"%link},resp='j')
+		hd['Cookie']=body.cookiestring;href='http://phim.megabox.vn/content/get_link_video_lab'
+		maxspeedlink=make_post(href,{'Referer':url},data={"link":"%s"%link},resp='j')
 		if maxspeedlink.get('link'):
 			name=re.sub(' \[COLOR.+?/COLOR\]','',name)
 			xbmcsetResolvedUrl(maxspeedlink.get('link')+'|'+urllib.urlencode(hd),name+'Maxlink')
@@ -2933,7 +2933,7 @@ def hdviet(name,url,img,mode,page,query):
 		url='http://movies.hdviet.com/tim-kiem.html?keyword=%s'%urllib.quote_plus(string)
 		hdviet(name,url,img,mode,page,query='timkiem')
 	if query=='hdviet.com':
-		name=color['search']+"Tìm phim trên hdviet.com[/COLOR]"
+		name=color['search']+"Search trên hdviet.com[/COLOR] (Hãy chọn độ phân giải trên settings nhé)"
 		addir(name,'http://movies.hdviet.com/tim-kiem.html',icon['icon'],fanart,mode,1,'search',True)
 		href='http://movies.hdviet.com/phim-yeu-thich.html'
 		addir(color['search']+'Phim yêu thích của tôi trên hdviet[/COLOR]',href,icon['icon'],fanart,mode,1,'yeu-thich',True)
@@ -3147,7 +3147,7 @@ def hayhaytv(name,url,img,fanart,mode,page,query):
 		return href,sub
 	#=============================================================================================
 	if query=='hayhaytv.vn':
-		body=hh_html('hayhaytv.html','r');name=color['search']+"Tìm phim trên hayhaytv.vn[/COLOR]"
+		body=hh_html('hayhaytv.html','r');name=color['search']+"Search trên hayhaytv.vn[/COLOR]"
 		addir_info(name,urlhome+'tim-kiem/',ico,'',mode,1,'makeitemsearch',True)
 		for id,href,title in re.findall('<li><a class="([1-9]{1,2}).*" href="(.+?)">(.+?)</a></li>',body):
 			addir_info(namecolor(title),href,ico,'',mode,1,'main_menu',True)
@@ -3313,7 +3313,7 @@ def phimmoi(name,url,img,mode,page,query):
 		return link
 
 	if query=='phimmoi.net':
-		name=color['search']+"Tìm phim trên phimmoi.net[/COLOR]"
+		name=color['search']+"Search trên phimmoi.net[/COLOR] (Chọn độ phân giải max trên settings nhé)"
 		addir_info(name,'http://www.phimmoi.net/tim-kiem/',icon['phimmoi'],'',mode,1,'search',True)
 		name=color['search']+'Tủ phim trên phimmoi.net của tôi[/COLOR]'
 		addir_info(name,'http://www.phimmoi.net/tu-phim/',img,'',mode,1,'readpage',True)
@@ -3404,6 +3404,12 @@ def phimmoi(name,url,img,mode,page,query):
 		language=xsearch("currentEpisode.language='(.+?)'",body,1)
 		label='[COLOR gold]S0 %s[/COLOR]: '%get_language(language)+name
 		if link:addir_info(label,link,img,art,mode,page,'pmplay_ple')
+		
+		content=xsearch('<div class="list-server">(.+?)</div>',body,1,re.DOTALL).replace('\n','')
+		for label,subcontent in re.findall('class="server-title">(.+?)</h3>(.+?)</ul>',content):
+			for href,title in re.findall('href="(.+?)">(.+?)</a>',subcontent):
+				addir_info('%s %s'%(label,title),urlhome+href,img,art,mode,page,'pmplay_pbo')
+			
 		episodeJson=xsearch("episodeJson='(.+?)'",body,1)
 		try:episodeJson=eval(episodeJson)
 		except:return

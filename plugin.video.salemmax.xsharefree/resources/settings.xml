@@ -22,6 +22,7 @@
 		<setting id="autoload_sub" type="bool" label="[COLOR green]Tự động load sub trong [COLOR green]SubsFolder[/COLOR][/COLOR] (y/n)" default="true"/>
 		<setting id="autotrans_sub" type="bool" label="[COLOR green]Tự động dịch sau khi download sub tiếng Anh[/COLOR] (y/n)" default="true"/>
 		<setting id="autodel_sub" type="bool" label="[COLOR green]Tự động xóa thư mục SubsFolder[/COLOR] (y/n)" default="true"/>
+		<setting id="hdvnfindall" type="bool" label="[COLOR green]Không giới hạn tìm kiếm trên [COLOR red]hdvietnam.com[/COLOR][/COLOR] (All Uploader) (y/n)" default="true"/>
 		<setting id="history" type="bool" label="[COLOR green]Cho phép hiển thị lịch sử tìm kiếm[/COLOR] (y/n)" default="true"/>
 		<setting id="phim18" type="bool" label="[COLOR red]Kích hoạt xem phim 18+[/COLOR] (y/n)" default="true"/>
 		

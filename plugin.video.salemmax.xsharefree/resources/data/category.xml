@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8">
 <a server="MMN" category="FRE" mode="10" color="orange" icon="serverphimkhac.png">Kho phim trên các server khác (có phí và free)</a>
-
 <a server="FRE" category="hdviet.com" mode="22" color="darkorange" icon="hdviet.png">Kho phim trên hdviet.com</a>
 <a server="FRE" category="hayhaytv.vn" mode="23" color="tomato" icon="hayhaytv.png">Kho phim trên hayhaytv.vn</a>
 <a server="FRE" category="phimmoi.net" mode="24" color="ghostwhite" icon="phimmoi.png">Kho phim trên phimmoi.net</a>
