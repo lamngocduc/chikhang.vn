@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.salemmax.fptplay" name="[COLOR Salemmax][B]FPT Play TV[/B][/COLOR]" version="1.5.6" provider-name="repository.cx.com">
+<addon id="plugin.video.salemmax.fptplay" name="[COLOR lime][B]FPT Play TV[/B][/COLOR]" version="1.5.6" provider-name="repository.cx.com">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.xbmcswift2" version="2.4.0"/>
@@ -14,6 +14,9 @@
     <platform>all</platform>
     <language></language>
     <summary lang="en">Vietnam TV Online</summary>
-    <description lang="en">This plugin allows you to watch live TV channels in Vietnam - Source from ftp play sites (http://fptplay.net)</description>
+    <description lang="en">[COLOR lime]app được Salemmax xây dựng dựa vào nguồn dữ liệu trên internet. Bản quyền tác giả thuộc về Salemmax. 
+	- Với mục đích phục vụ nhu cầu giải trí cho cộng đồng Kodi. Chúng tôi đã tốn nhiều thời gian và công sức để tạo ra sản phẩm, vì vậy mong các tổ chức và cá nhân tuân thủ các quy định sau:
+	- Không tự ý sử dụng mã nguồn của addon khi chưa có sự đồng ý của nhóm lập trình viên Salemmax.
+	- Không tự ý chỉnh sửa lại app và chia sẻ, quảng cáo phục vụ cho nhu cầu lợi ích của một cá nhân hay tập thể nào đó.[/COLOR]</description>
   </extension>
 </addon>
